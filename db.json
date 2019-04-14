@@ -1,0 +1,32 @@
+{
+  "contacts": [
+    {
+      "name": "Jaso",
+      "email": "jasone@email.com",
+      "phone": "888-888-8888",
+      "image": "/img/person-02.svg",
+      "id": 2
+    },
+    {
+      "name": "ddd",
+      "email": "dddd",
+      "phone": "9999999",
+      "image": "/img/person-01.svg",
+      "id": 4
+    },
+    {
+      "name": "Hey",
+      "email": "dude@email.com",
+      "phone": "999-999-999",
+      "image": "/img/person-04.svg",
+      "id": 5
+    },
+    {
+      "name": "Jan",
+      "email": "jane@gmail.com",
+      "phone": "okay",
+      "image": "/img/person-03.svg",
+      "id": 6
+    }
+  ]
+}

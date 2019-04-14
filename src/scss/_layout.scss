@@ -1,0 +1,152 @@
+// CONTACT SEARCH
+.contact-search {
+  width: 100%;
+  position: relative;
+
+  // CONTACT SEARCH ICON
+  .contact-search-icon {
+    top: 50%;
+    left: 10px;
+    width: 25px;
+    height: auto;
+    transform: translate(0%, -50%);
+    position: absolute;
+  }
+}
+
+// INDIVIDUAL CARD
+.contact-list {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+
+  .contact-card {
+    .contact-card-user-img {
+      max-width: 50px;
+      height: auto;
+    }
+
+    .delete-contact {
+      max-width: 35px;
+    }
+  }
+}
+
+//FORM INPUT
+.form-input {
+  position: relative;
+  margin-bottom: 0px;
+  @include fade(all, 0.3s);
+
+  input {
+    margin-top: 10px;
+    padding-left: 15px;
+  }
+
+  label {
+    position: absolute;
+    left: 12px;
+    bottom: -20px;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &.active {
+    margin-bottom: 25px;
+
+    input {
+      border: 1px solid #f66;
+    }
+
+    label {
+      font-size: 0.9rem;
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+
+// BUTTON LIST
+.button-list {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  .button {
+    border-radius: 50%;
+    padding: $padding;
+    margin-left: $margin;
+
+    img {
+      filter: invert(100%) sepia(95%) saturate(21%) hue-rotate(319deg)
+        brightness(105%) contrast(105%);
+    }
+  }
+}
+
+.contact-edit {
+  img {
+    max-width: 150px;
+  }
+
+  h2{
+    margin-bottom: 0px;
+  }
+}
+.delete-contact {
+  align-items: center;
+  margin-top: $margin;
+  cursor: pointer;
+
+  span{
+    margin-left: 5px;
+  }
+  .icon {
+    width: 25px;
+  }
+}
+
+
+// MODAL
+.modal{
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 999;
+
+  .modal-container{
+    padding: 50px;
+    max-width: 300px;
+    width: 100%;
+  }
+
+  button{
+    margin-right: 10px;
+    @include fade(all, 0.2s);
+
+    &:hover{
+      background: #4fc08d;
+      color: white;
+    }
+  }
+}
+
+.slide-enter {
+  transform: translateX(-100%);
+  transition : all .3s ease-in;
+}
+
+.slide-enter.slide-enter-active {
+  transform: translateX(0);
+}
+
+// componentがCSSTransitionGroup Component以下から削除されたとき
+.slide-leave {
+  transform: translateX(100%);
+  transition : all .3s ease-out;
+}
+
+.slide-leave.slide-leave-active {
+  transform: translateX(0px);
+}

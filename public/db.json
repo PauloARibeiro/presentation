@@ -1,0 +1,20 @@
+[
+  {
+    "name": "John Doe",
+    "email": "johndoe@email.com",
+    "phone": "999-999-9999",
+    "image": "/img/person-01.svg"
+  },
+  {
+    "name": "Jason Doe",
+    "email": "jasone@email.com",
+    "phone": "888-888-8888",
+    "image": "/img/person-02.svg"
+  },
+  {
+    "name": "Joana Doe",
+    "email": "joana@email.com",
+    "phone": "999-999-9999",
+    "image": "/img/person-03.svg"
+  }
+]

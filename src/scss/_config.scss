@@ -1,0 +1,73 @@
+//---------------
+// VARIABLES
+//---------------
+// COLORS
+$page-colors: (
+  black: #34495e,
+  grey: #525252,
+  grey-light: #ccc,
+  grey-lightest: #f6f6f6,
+  white: #fff,
+  orange: #e96900,
+  red: #f66,
+  yellow: #ffbc66,
+  blue: #486491,
+  green: #4fc08d
+);
+
+//PADDING & MARGIN
+$padding: 15px;
+$margin: 15px;
+
+//BORDER-RADIUS
+$border-radius: 10px;
+
+//FONT WEIGHTS
+$font-weight: (
+  normal: 400,
+  bold: 700,
+  bolder: 900,
+);
+
+// CURSOR TYPES
+$cursor-types: (
+  pointer: pointer,
+  default: default,
+  no-drop: no-drop,
+);
+
+//---------------
+// LOOPS
+//---------------
+// LOOP THROUGH COLORS OBJECT
+@each $page-colors, $color in $page-colors{
+  // CREATE BACKGROUND COLOR VARIABLE
+  .background-#{$page-colors}{
+    background-color: $color;
+  }
+  
+  // CREATE COLOR VARIABLE
+  .color-#{$page-colors}{
+    color: $color;
+  }
+
+  // CREATE BORDER COLOR
+  .border-#{$page-colors}{
+    border: 1px solid $color;
+  }
+
+}
+
+// ADD WEIGHTS TO FONTS
+@each $font-weight, $weight in $font-weight{
+  .font-#{$font-weight}{
+    font-weight: $weight;
+  }
+}
+
+// CURSOR POINTERS
+@each $cursor-types, $cursor in $cursor-types{
+  .cursor-#{$cursor-types}{
+    cursor: $cursor;
+  }
+}

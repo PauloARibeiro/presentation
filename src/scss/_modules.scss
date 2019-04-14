@@ -1,0 +1,113 @@
+//---------------
+// CONTAINER
+//---------------
+.container {
+  max-width: 900px;
+  width: 100%;
+  height: 97vh;
+  margin: 0 auto;
+  position: relative;
+}
+
+//---------------
+// FLEX
+//---------------
+.flex {
+  display: flex;
+}
+
+.flex-full-center {
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+// FLEX JUSTIFY CONTENT
+.flex-start {
+  justify-content: flex-start;
+}
+
+.flex-end {
+  justify-content: flex-end;
+}
+
+.flex-space-between {
+  justify-content: space-between;
+}
+
+//---------------
+// PADDING AND MARGINS
+//---------------
+// PADDING
+.padding {
+  padding: $padding;
+}
+// MARGIN
+.margin {
+  margin: $margin;
+}
+.margin-auto {
+  margin: 0 auto;
+}
+
+// REMOVE ALL PADDING AND MARGINS
+.remove-padding {
+  padding: 0 !important;
+}
+.remove-margin {
+  margin: 0 !important;
+}
+
+//---------------
+// BORDER RADIUS
+//---------------
+.border-radius {
+  border-radius: $border-radius;
+}
+
+//---------------
+// ALL ICONS
+//---------------
+.icon {
+  width: 20px;
+  height: auto;
+}
+
+// HOVER
+.hover {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: $border-radius;
+    @include fade(background, 0.5s);
+  }
+
+  &:hover {
+    &::after{
+      background: rgba($color: #fff, $alpha: 0.3);
+    }
+  }
+
+  &.circle{
+    &:hover{
+      &::after{
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+// BOX SHADOW
+.box-shadow{
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.08);
+}
