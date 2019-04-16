@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import arrow from "../img/arrow.svg";
 
-const Contact = () => {
+const ContactHooks = () => {
   const [contacts, setContacts] = useState([]);
 
   // SAME AS COMPONENTDIDMOUNT, ETC..
@@ -52,4 +52,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default ContactHooks;

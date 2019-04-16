@@ -1,12 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Contacts from "./Contacts";
+import ContactsHooks from "./ContactsHooks";
+import Contact from "./Contact";
 import Button from "../components/modules/Button";
 
 const ContactList = () => {
   return (
     <div>
-      <Contacts />
+      {/* <ContactsHooks /> */}
+      <Contact />
 
       <div className="button-list flex flex-end">
         <Link to="/add">
